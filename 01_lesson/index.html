@@ -1,0 +1,174 @@
+<!--Document type declaration--> <!--ctrl+u resource u açıyor-->
+<!DOCTYPE html>
+<!--Dili tanımlamak için-->
+<html lang="en">
+    <!--head de yazan her şey sitede yazmaz-->
+    <head>
+        <!-- İnternette bulunmasına yardımcı oluyor-->
+       <!-- head kısmına css, js vb gibi kısımlar da konulur-->
+        <meta charset="UTF-8">  <!--charset character set in kısaltması-->
+        <meta name="author" content="Dugu">
+        <meta name ="description" content="This page includes all the things I am learning">
+        <title>My First Web Site</title>
+        <!--Sekme kısmına ikon resmi koymayı sağlıyor-->
+        <!--link relative referance-->
+        <link rel="icon" href="1f44f.png" type="image/x-icon">
+        <!--CSS e yönlendiriyor sayfanın rengi ve font değişiyor-->
+        <link rel="stylesheet" href="main.css"  type="text/css">
+    </head>
+    <body>
+        <header>
+            <!--having h1-6 division helps screen readers-->
+            <!-- her sayfada sadece 1 tane h1 olmalı-->
+            <h1>My goals for the year</h1>  
+
+            <!--Sayfayı konusuna göre bölümlere ayırmana ve daha sonra gerekli linke basınca sayfanın o bölümüne göndermeye yarıyor-->
+            <!--Bu linkler internal link tir-->
+            <!--birden fazla nav varsa nav lerin karışmaması için tanımlanması gerekir-->
+            <!--nav in içinde h1-6(heading) varsa labelledby yazılması gerekir-->
+            <nav aria-labelledby="primary-navigation">
+                <h2 id="primary-navigation">Primary Navigation</h2>
+                <ul>
+                    <li>
+                        <a href="#html">Learning Html</a>
+                    </li>
+                    <li>
+                        <a href="#vacation">Planning a vacation</a>
+                    </li>
+
+                </ul>
+            </nav>
+    </header>
+        <!-- <hr> = horizontal rule Sayfaya çizgi çekiyor-->
+        <hr>
+    
+    <!--her sayfada sadece bir main olabilir-->
+    <main>
+        <!--Bu bölümü tanıtmaya(identify) yarıyor-->
+        <!--(<section id="html">)-->
+        <!--section tag i genel olarak ayırıyor article tag i ise belli bir konusu olan şeyler için kullanılır-->
+        <article id="html">
+            <h2>I'm ready to learn HTML</h2>
+            <p>This is my first web page</p>
+            <section>
+                <h3>HTML5</h3>
+                <!--<img> tag i görsel yüklemeyi sağlıyor ve relative bir tag dir-->
+                <!--"alt" screen reader ve accessiblity sağlıyor ayrıca görsel yüklenmezse görsel yerine bu yazı çıkıyor-->
+                <!--title tag ini screen reader okuyamaz bu sebeple önemli şeyleri buraya yazma + görüntünün üzerine mouse imlecini getirince açıklayıcı yazıyı gösteriyor-->
+                <img src="img/html_logo.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300s"> 
+                <figure>
+                    <figcaption>An exaple of HTML5 code</figcaption>
+                    <p>
+                        <!--<code> kodu göstemek için-->
+                        <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+                    </p>
+                </figure>
+        </section>
+        <section>
+            <h3>My daily schedule</h3>
+            <p>Let me tell you how:</p>
+            <ol>
+                <!--"&" usually starts a HTML entity  nbsp=nonbreaking space -->
+                <!--ctrl+D helps select the same texts that are below the selected tags-->
+                <br><li>...I learn more about web dev.</li>
+                <br><li>...I plan out my schedule.</li>
+                <!--abbr=abbriviation yazıldığında kısaltmanın üzerine geldiğinde uzun halini yazıyor-->
+                <!--abbr tagi screen reader tarafından okunamıyor bu sebeple çok önemli kısaltmaları buraya yazma-->
+                <br><li>...I use resources from <abbr title="Mozilla Developer Network">
+                    <!-- <a href="">...</a> linke yönlendirmek için -->
+                    <!--link absolute referance-->
+                    <a href="https://developer.mozilla.org/">MDN</a></abbr>.</li>
+            </ol>
+            <!--<aside> tag i sayfanın yan barı için veya herhangi bir kısmı için kullanılabilir. Önemli şeyler için kullanılmaz-->
+            <aside>
+                <!--detail tag i yazıyı gizliyor işarete basınca yazı gözüküyor-->
+                <details>
+                    <!--mark tag i yazıya highlight ekliyor-->
+                    <summary>Guest the <mark>number of hours</mark> I code per day</summary>
+                    <!--<time> tag i screen reader ın okumasını sağlıyor-->
+                    <p>I start at<time datetime="08.00">8 am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning</p>
+                </details>
+            </aside>
+        </section>
+        </article>
+
+            <hr>
+
+            <!--eğer "br*(sayıyı yaz)" yaparsan yazdığın sayı kadar <br> tag i yazılır-->
+            <!-- (<section id="vacation">) -->
+        <article id="vacation">
+            <h2>I am also planning a vacation</h2>
+            <!--<em>, <strong> gibi tagler html e anlamsal(semantik) yazı ekler-->
+            <p>I've been working hard and <em>really need a getaway</em>.</p>
+            <p>I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach.</p>
+
+            <section>
+            <h3>Places I'd like to visit</h3>
+                <ul>
+                    <li>
+                        <p>I heard good things about Marmaris.</p>
+                            <figure>
+                                <!--"loading='eager'" sitedeki resmi o görsel o esnada ekranda gözükmese bile yükler ve bu default tur "loading='lazy'" görsel gözükmezse indirmez-->
+                                <img src="img/caribbean.jpg" alt="Marmaris Sahili" title="I want to visit a beach in Marmaris"  
+                                width="400" height="225" loading="lazy">
+                                <!--"figcaption" tag inde yazan yazıyı yukarıdaki görsele bağlıyor-->
+                                <!--<figcaption>; <figure> tag inin ya en başında ya da en sonunda olabilir -->
+                                <figcaption>
+                                    Marmaris beach getaway
+                                </figcaption>
+                            </figure>
+                    </li>
+                    <li>
+                    <p>I've heard good things about going here:</p>
+                        <!--address tag helps recoginize that the info is an adress and italize it-->
+                        <address>
+                            Kartal sokak, Cumhuriyet caddesi,
+                            Cennet Oteli <br>
+                            Pembe Balkonlar<br>
+                            Marmaris, Muğla, Türkiye 353535
+                        </address>
+
+                    <br>
+                        <figure>
+                            <img src="img/vacation.jpg" alt="Pembe Balkonlar" title="It's 5 o'clock somewhere!" width="400" height="267" loading="lazy">
+                            <figcaption>
+                                Marmaris vacation image
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section>
+            <!--TODO: Add more places--
+            <h3>Place I want to avoid</h3>
+            <p>Anywhere in Central Anatolia. <strong>Nope!</strong></p>
+
+            <!--dt=description list, dt=description term, dd=description detail-->
+                <dl>
+                    <dt>North Pole</dt>
+                    <dd>I heard this place is <strong>cold</strong></dd>
+
+                    <dt>South Pole</dt>s
+                    <dd>I heard this place is also cold</dd>
+
+                    <dt>Mountain Tops</dt>
+                    <dd>I heard these are also cold</dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <!--header gibi footer da birden fazla olabilir-->
+    <footer>
+       <p> 
+            <!--lt= less than, copy=copy right symbol, gt=greater than-->
+            &lt;&lt;&lt; &copy; <a href="about.html">Dugu</a> &gt;&gt;&gt;
+        </p>
+        <p>
+            <!--"#"işareti sayfanın başına yönlendiriyor-->
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+    </body>
+
+</html> 

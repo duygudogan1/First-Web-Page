@@ -1,0 +1,20 @@
+html {
+    font-size: 22px
+}
+/*Arka plan rengini düzenliyor*/
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+/*Linklerin rengini düzenliyor* OLMADI KONTROL ET*/
+
+a {
+    color:blue;
+}
+a:visited {
+    color: darkcyan;
+}
+
+a:hover, a:active {
+    color:gold;
+}
