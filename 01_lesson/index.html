@@ -1,31 +1,32 @@
-<!--Document type declaration--> <!--ctrl+u resource u açıyor-->
+<!--Document type declaration--> <!--ctrl+u opens resource-->
 <!DOCTYPE html>
-<!--Dili tanımlamak için-->
+<!--To define the language-->
 <html lang="en">
-    <!--head de yazan her şey sitede yazmaz-->
+    <!--Not everything written in head tag is shown in the page-->
     <head>
-        <!-- İnternette bulunmasına yardımcı oluyor-->
-       <!-- head kısmına css, js vb gibi kısımlar da konulur-->
-        <meta charset="UTF-8">  <!--charset character set in kısaltması-->
+        <!--<meta> helps finding the page in the web-->
+       <!--Parts of CSS, JS or other codes can be put inside the <head>-->
+        <!--<charset> = character set-->
+        <meta charset="UTF-8"> 
         <meta name="author" content="Dugu">
         <meta name ="description" content="This page includes all the things I am learning">
         <title>My First Web Site</title>
-        <!--Sekme kısmına ikon resmi koymayı sağlıyor-->
-        <!--link relative referance-->
+        <!--This link puts an image to the tab section pf the page-->
+        <!-- This link is a relative referance-->
         <link rel="icon" href="1f44f.png" type="image/x-icon">
-        <!--CSS e yönlendiriyor sayfanın rengi ve font değişiyor-->
+        <!--This code redirects to CSS code-->
         <link rel="stylesheet" href="main.css"  type="text/css">
     </head>
     <body>
         <header>
-            <!--having h1-6 division helps screen readers-->
-            <!-- her sayfada sadece 1 tane h1 olmalı-->
+            <!--Having h1-6 division helps screen readers-->
+            <!-- There can only be one h1 per page-->
             <h1>My goals for the year</h1>  
 
-            <!--Sayfayı konusuna göre bölümlere ayırmana ve daha sonra gerekli linke basınca sayfanın o bölümüne göndermeye yarıyor-->
-            <!--Bu linkler internal link tir-->
-            <!--birden fazla nav varsa nav lerin karışmaması için tanımlanması gerekir-->
-            <!--nav in içinde h1-6(heading) varsa labelledby yazılması gerekir-->
+            <!-- <nav> helps divide the page to topics and when there is a link issiued it sends user to that topic in the web page-->
+            <!--<nav> links are internal links-->
+            <!--If there is more than one nav in a code these nav tags must be named(identified)-->
+            <!--If nav tag has headings(h1-6) then when they are named "aria-labelledby" commend must be used in the code-->
             <nav aria-labelledby="primary-navigation">
                 <h2 id="primary-navigation">Primary Navigation</h2>
                 <ul>
@@ -39,27 +40,27 @@
                 </ul>
             </nav>
     </header>
-        <!-- <hr> = horizontal rule Sayfaya çizgi çekiyor-->
+        <!--<hr> = horizontal rule. Adds a horizontal line to the page-->
         <hr>
     
-    <!--her sayfada sadece bir main olabilir-->
+    <!--There can only be one main per page-->
     <main>
-        <!--Bu bölümü tanıtmaya(identify) yarıyor-->
-        <!--(<section id="html">)-->
-        <!--section tag i genel olarak ayırıyor article tag i ise belli bir konusu olan şeyler için kullanılır-->
+        <!--Section tag helps identifying the topic in that page-->
+        <!--If wanted <section id="html"> code can be used for identifying this part of the page but using <article> tag is more convenient because this part of the page has defined topic rather than a general(loose) one  --> 
         <article id="html">
             <h2>I'm ready to learn HTML</h2>
             <p>This is my first web page</p>
             <section>
                 <h3>HTML5</h3>
-                <!--<img> tag i görsel yüklemeyi sağlıyor ve relative bir tag dir-->
-                <!--"alt" screen reader ve accessiblity sağlıyor ayrıca görsel yüklenmezse görsel yerine bu yazı çıkıyor-->
-                <!--title tag ini screen reader okuyamaz bu sebeple önemli şeyleri buraya yazma + görüntünün üzerine mouse imlecini getirince açıklayıcı yazıyı gösteriyor-->
+                <!--<img> tag adds images to the pages it is a relative tag-->
+                <!--<alt> is used for screen readers and accessiblity. It is also shown as a text when the page is unable load the images-->
+                <!--Screen reader does not read the --title="insert_text"-- therefore dont write important information in this tag-->
+                <!--When the mouse is placed on the image whatever written on --title="insert_text"-- is shown a text in front of the text -->
                 <img src="img/html_logo.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300s"> 
                 <figure>
-                    <figcaption>An exaple of HTML5 code</figcaption>
+                    <figcaption>An example of HTML5 code</figcaption>
                     <p>
-                        <!--<code> kodu göstemek için-->
+                        <!--<code> is used to show codes-->
                         <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
                     </p>
                 </figure>
@@ -72,20 +73,20 @@
                 <!--ctrl+D helps select the same texts that are below the selected tags-->
                 <br><li>...I learn more about web dev.</li>
                 <br><li>...I plan out my schedule.</li>
-                <!--abbr=abbriviation yazıldığında kısaltmanın üzerine geldiğinde uzun halini yazıyor-->
-                <!--abbr tagi screen reader tarafından okunamıyor bu sebeple çok önemli kısaltmaları buraya yazma-->
+                <!--<abbr> is used for abbriviations-->
+                <!--<bbr> cannot be seen by the screen readers so dont write important info in here-->
                 <br><li>...I use resources from <abbr title="Mozilla Developer Network">
-                    <!-- <a href="">...</a> linke yönlendirmek için -->
+                    <!-- <a href="">...</a> is used for external links -->
                     <!--link absolute referance-->
                     <a href="https://developer.mozilla.org/">MDN</a></abbr>.</li>
             </ol>
-            <!--<aside> tag i sayfanın yan barı için veya herhangi bir kısmı için kullanılabilir. Önemli şeyler için kullanılmaz-->
+            <!--<aside> is usually used for the side bar of the page but can be used in other parts of it as well. It is not used for important information-->
             <aside>
-                <!--detail tag i yazıyı gizliyor işarete basınca yazı gözüküyor-->
+                <!--<detail> hides the info but when its side button is clicked it shows the info-->
                 <details>
-                    <!--mark tag i yazıya highlight ekliyor-->
+                    <!--<mark> is used for highlighting text-->
                     <summary>Guest the <mark>number of hours</mark> I code per day</summary>
-                    <!--<time> tag i screen reader ın okumasını sağlıyor-->
+                    <!--<time> helps screen reader read the time-->
                     <p>I start at<time datetime="08.00">8 am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning</p>
                 </details>
             </aside>
@@ -94,11 +95,11 @@
 
             <hr>
 
-            <!--eğer "br*(sayıyı yaz)" yaparsan yazdığın sayı kadar <br> tag i yazılır-->
-            <!-- (<section id="vacation">) -->
+            <!--"br*(insert_number)" is used for creating as many <br> as you like-->
+            <!-- (<section id="vacation">) the use of <article> tag is more convenient here I keep it for my notes -->
         <article id="vacation">
             <h2>I am also planning a vacation</h2>
-            <!--<em>, <strong> gibi tagler html e anlamsal(semantik) yazı ekler-->
+            <!--<em>, <strong> tags are semantic tags-->
             <p>I've been working hard and <em>really need a getaway</em>.</p>
             <p>I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach.</p>
 
@@ -108,11 +109,11 @@
                     <li>
                         <p>I heard good things about Marmaris.</p>
                             <figure>
-                                <!--"loading='eager'" sitedeki resmi o görsel o esnada ekranda gözükmese bile yükler ve bu default tur "loading='lazy'" görsel gözükmezse indirmez-->
+                                <!--"loading='eager'" loads the image even if the image is not shown on the page yet. This slow downs the loading of the page and it is the default setting "loading='lazy'" on the other hand does not load the image unless the user is close to where the image is on the page, it loads the page faster-->
                                 <img src="img/caribbean.jpg" alt="Marmaris Sahili" title="I want to visit a beach in Marmaris"  
                                 width="400" height="225" loading="lazy">
-                                <!--"figcaption" tag inde yazan yazıyı yukarıdaki görsele bağlıyor-->
-                                <!--<figcaption>; <figure> tag inin ya en başında ya da en sonunda olabilir -->
+                                <!--Whatever written in <figcaption> will be bound to the image-->
+                                <!--<figcaption> can either be used at the start of or at the end of (inside of it) <figure></figure>-->
                                 <figcaption>
                                     Marmaris beach getaway
                                 </figcaption>
@@ -120,7 +121,7 @@
                     </li>
                     <li>
                     <p>I've heard good things about going here:</p>
-                        <!--address tag helps recoginize that the info is an adress and italize it-->
+                        <!--<address> recognizes that the info is an adress and italize the text-->
                         <address>
                             Kartal sokak, Cumhuriyet caddesi,
                             Cennet Oteli <br>
@@ -139,9 +140,9 @@
                 </ul>
             </section>
             <section>
-            <!--TODO: Add more places--
+            <!--TODO: Add more places-->
             <h3>Place I want to avoid</h3>
-            <p>Anywhere in Central Anatolia. <strong>Nope!</strong></p>
+            <p>Anywhere snowy. <strong>Nope!</strong></p>
 
             <!--dt=description list, dt=description term, dd=description detail-->
                 <dl>
@@ -158,14 +159,14 @@
         </article>
     </main>
     <hr>
-    <!--header gibi footer da birden fazla olabilir-->
+    <!--Like <header> there can be more than one <footer> in page-->
     <footer>
        <p> 
             <!--lt= less than, copy=copy right symbol, gt=greater than-->
             &lt;&lt;&lt; &copy; <a href="about.html">Dugu</a> &gt;&gt;&gt;
         </p>
         <p>
-            <!--"#"işareti sayfanın başına yönlendiriyor-->
+            <!--"#" symbol sends the user to the top of the page-->
             <a href="#">Back to top</a>
         </p>
     </footer>
