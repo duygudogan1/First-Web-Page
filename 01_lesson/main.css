@@ -1,0 +1,28 @@
+/*Defines page background color*/
+html {
+  font-size: 22px;
+}
+
+body {
+  background-color: #333;
+  color: whitesmoke;
+}
+/*Defines link colors*/
+a {
+  color: rgb(125, 146, 33);
+}
+
+a:visited {
+  color: rgb(149, 18, 81);
+}
+
+a:hover, a:active {
+  color: #238242;
+}
+
+table, tr, th, td, caption {
+  border: 1px solid #eee;
+  font-family: 'Courier New', Courier, monospace;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
