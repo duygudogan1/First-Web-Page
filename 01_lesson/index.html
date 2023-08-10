@@ -1,5 +1,5 @@
 <!--Document type declaration-->
-<!--ctrl+u opens resource-->
+<!--ctrl+u opens resource shift+alt+down arrow is used for copying the selected text and paste it below the selected text ctrl+d -->
 <!DOCTYPE html>
 <!--lang="insert_language" defines the language-->
 <html lang="en">
@@ -8,12 +8,9 @@
     <!--<meta> helps finding the page in the web-->
     <!--Parts of CSS, JS or other codes can be put inside the <head>-->
     <!--<charset> = character set-->
-    <meta charset="UTF-8" />
-    <meta name="author" content="Dugu" />
-    <meta
-      name="description"
-      content="This page includes all the things I am learning"
-    />
+    <meta charset="UTF-8">
+    <meta name="author" content="Dugu">
+    <meta name="description" content="This page includes all the things I am learning">
     <title>My First Web Site</title>
     <!--This link puts an image to the tab section pf the page-->
     <!-- This link is a relative referance-->
@@ -40,11 +37,14 @@
           <li>
             <a href="#vacation">Planning a vacation</a>
           </li>
+          <li>
+            <a href="#contact">Contact me!</a>
+          </li>
         </ul>
       </nav>
     </header>
     <!--<hr> = horizontal rule. Adds a horizontal line to the page-->
-    <hr />
+    <hr>
 
     <!--There can only be one main per page-->
     <main>
@@ -57,15 +57,14 @@
           <h3>HTML5</h3>
           <!--<img> tag adds images to the pages it is a relative tag-->
           <!--<alt> is used for screen readers and accessiblity. It is also shown as a text when the page is unable load the images-->
-          <!--Screen reader does not read the --title="insert_text"-- therefore dont write important information in this tag-->
-          <!--When the mouse is placed on the image whatever written on --title="insert_text"-- is shown a text in front of the text -->
+          <!--Screen reader does not read the title="insert_text" therefore dont write important information in this tag-->
+          <!--When the mouse is placed on the image whatever written on title="insert_text" is shown a text in front of the text -->
           <img
             src="img/html_logo.png"
             alt="HTML5 Logo"
             title="I am learning HTML5"
             width="200"
-            height="200"
-          />
+            height="200">
           <figure>
             <figcaption>An example of HTML5 code</figcaption>
             <p>
@@ -80,13 +79,10 @@
           <ol>
             <!--"&" usually starts a HTML entity  nbsp=nonbreaking space -->
             <!--ctrl+D helps select the same texts that are below the selected tags-->
-            <br />
             <li>...I learn more about web dev.</li>
-            <br />
             <li>...I plan out my schedule.</li>
             <!--<abbr> is used for abbriviations-->
             <!--<bbr> cannot be seen by the screen readers so dont write important info in here-->
-            <br />
             <li>
               ...I use resources from
               <abbr title="Mozilla Developer Network">
@@ -106,15 +102,79 @@
               </summary>
               <!--<time> helps screen reader read the time-->
               <p>
-                I start at<time datetime="08.00">8 am</time> and I write code
+                I start at <time datetime="08:00">8 am</time> and I write code
                 for <time datetime="PT3H">3 hours</time> every morning
               </p>
             </details>
           </aside>
+          <br>
+          <hr>
+          <!--TABLES-->
+          <table>
+            <!--<caption> adds a caption ats the top of the table-->
+            <caption><b>My Daily Schedule</b></caption>
+            <!--<thead> = table head-->
+            <!--<thead> adds semantic meaning to the page but does not change the way the page looks-->
+            <thead>
+            <!--<tr> = table row-->
+            <tr>
+            <!--Adds a row to table-->
+            <th>&nbsp;</th>
+            <!--<th scope="col"> adds semantic meaning to the page-->
+            <th scope="col">Time</th>
+            <th scope="col">Activity</th>
+            </tr>
+            </thead>
+            <!--<tbody> adds semantic meaning to the page but does not change the way the page looks-->
+            <tbody>
+            <tr>
+               <!--<th scope="col"> adds semantic meaning to the page and the text written in this code gets put in the table-->
+              <th scope="row">Morning</th>
+              <!--<td> = table detail-->
+              <td>
+                <time datetime="08:00">08:00</time> -
+                <time datetime="12:00">11:00</time>
+              </td>
+              <td>Code</td>
+            </tr>
+            <tr>
+              <th scope="row">Break</th>
+              <td>
+                <time datetime="12:00">12:00</time> -
+                <time datetime="13:00">13:00</time>
+              </td>
+              <td>Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">Afternoon</th>
+              <td>
+                <time datetime="13:00">13:00</time> -
+                <time datetime="16:00">16:00</time>
+              </td>
+              <td>Study for Other Courses</td>
+            </tr>
+            <tr>
+              <th scope="row">Evening</th>
+               <!--<td rowspan="insert_row_number" extend the colum according to the number of colums you want. -->
+              <td rowspan="2">All the other times</td>
+              <td rowspan="2">Gym and Homework</td>
+            </tr>
+            <tr>
+              <th scope="row">Night</th>
+            </tr>
+          </tbody>
+          <!--<tfoot> adds semantic meaning to the page but does not change the way the page looks-->
+          <tfoot>
+            <tr>
+               <!--<td colspan="insert_colum_number" extend the colum according to the number of colums you want. -->
+              <td colspan="3">And That's what I do Everyday. Just Code, Study and Lift!</td>
+            </tr>
+          </tfoot>
+          </table>
         </section>
       </article>
 
-      <hr />
+      <hr>
 
       <!--"br*(insert_number)" is used for creating as many <br> as you like-->
       <!-- (<section id="vacation">) the use of <article> tag is more convenient here I keep it for my notes -->
@@ -133,14 +193,7 @@
               <p>I heard good things about Marmaris.</p>
               <figure>
                 <!--"loading='eager'" loads the image even if the image is not shown on the page yet. This slow downs the loading of the page and it is the default setting "loading='lazy'" on the other hand does not load the image unless the user is close to where the image is on the page, it loads the page faster-->
-                <img
-                  src="img/caribbean.jpg"
-                  alt="Marmaris Sahili"
-                  title="I want to visit a beach in Marmaris"
-                  width="400"
-                  height="225"
-                  loading="lazy"
-                />
+                <img src="img/caribbean.jpg" alt="Marmaris Sahili" title="I want to visit a beach in Marmaris" width="400" height="225" loading="lazy">
                 <!--Whatever written in <figcaption> will be bound to the image-->
                 <!--<figcaption> can either be used at the start of or at the end of (inside of it) <figure></figure>-->
                 <figcaption>Marmaris beach getaway</figcaption>
@@ -150,21 +203,14 @@
               <p>I've heard good things about going here:</p>
               <!--<address> recognizes that the info is an adress and italize the text-->
               <address>
-                Kartal sokak, Cumhuriyet caddesi, Cennet Oteli <br />
-                Pembe Balkonlar<br />
+                Kartal sokak, Cumhuriyet caddesi, Cennet Oteli <br>
+                Pembe Balkonlar<br>
                 Marmaris, Muğla, Türkiye 353535
               </address>
 
-              <br />
+              <br>
               <figure>
-                <img
-                  src="img/vacation.jpg"
-                  alt="Pembe Balkonlar"
-                  title="It's 5 o'clock somewhere!"
-                  width="400"
-                  height="267"
-                  loading="lazy"
-                />
+                <img src="img/vacation.jpg" alt="Pembe Balkonlar" title="It's 5 o'clock somewhere!" width="400" height="267" loading="lazy">
                 <figcaption>Marmaris vacation image</figcaption>
               </figure>
             </li>
@@ -181,7 +227,6 @@
             <dd>I heard this place is <strong>cold</strong></dd>
 
             <dt>South Pole</dt>
-            s
             <dd>I heard this place is also cold</dd>
 
             <dt>Mountain Tops</dt>
@@ -189,8 +234,144 @@
           </dl>
         </section>
       </article>
+      <hr>              
+      <article id="contact">
+      <!--FORMS-->
+      <h2>Contact me</h2>
+      <p>I'd really like to hear from you!</p>
+      <!--method="get" sends the user data to the selected website by using action="insert_wbsite"-->
+      <form action="https://httpbin.org/get" method="get">
+        <!--<fielset> = field section-->
+        <fieldset>
+          <!--<legend> adds a legend inside the <fieldset> attribute-->
+          <legend>Personal Info</legend>
+      <!--<p> here is used for create better structure between forms-->
+      <p>
+        <!--<label for="insert_text"> must match with id="insert_text"element-->
+        <!--autocomplete="on" saves the previous written data and suggests it to the user-->
+        <!--When "required" is used user cannot submit the form without filling the requiered data-->
+        <label for="firstName">First Name:</label>
+        <!--<input> does not have a closing element-->
+        <!--"autofocus" put the focus on the element when the page loads-->
+        <!--Only one element can have "autofocus" per page but it is adviced to use "autofocus" at the top of page-->
+        <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+      </p>
+      <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required>
+      </p>
+      <p>
+        <label for="password">Password:</label>
+        <!--type="password" does not display the written input to the screen-->
+        <input type="password" name="password" id="password" placeholder="Your secret" required>
+      </p>
+      <p>
+        <label for="phone">Password:</label>
+        <!--type="phone" does not exist type="tel" (short for telephone) is used instead-->
+        <!--If the webpage is used in mobile devices type="tel" attributes assists phones to recognize the numbers as phone numbers and sends users to call the number-->
+        <!--pattern="insert_pattern" is used for defining pattern for the input thus, limiting how an input should be put-->
+        <input type="tel" name="phone" id="phone" placeholder="05991234567" pattern="[0]{1}-[5]{1}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+      </p>
+      <p>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="random@email.com">
+      </p>
+      <p>
+        <label for="date">Your birthday:</label>
+        <input type="date" name="date" id="date">
+      </p>
+      <p>
+        <label for="decade">Favorite decade:</label>
+        <!--min="insert_number" and max="insert_number" is used for minimum and maximum values to select from-->
+        <!-- step="insert_number" is used for how many values it will switch between and value="insert_number" is used for displaying an examplary (like a place holder)-->
+        <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1990">
+      </p>
+      <p>
+        <label for="coffee">Favorite coffee</label>
+        <!--<select> creates select option-->
+        <!--"multiple" is used for selecting more than one option-->
+        <select name="coffee" id="coffee" multiple size="5">
+          <!--<optgroup> = option group-->
+            <!--<optgroup label="insert_label" can be seen by the user-->
+          <optgroup label="Coffees">
+            <!--<option> adds option to the selectables-->
+            <option value="regular coffee">Regular coffee</option>
+            <option value="iced coffee">Iced coffee</option>
+          </optgroup>
+          <optgroup label="Espresso drinks">
+            <!--"selected" is used for displaying the option by default-->
+            <option value="latte" selected>Latte</option>
+            <option value="cappucino">Cappucino</option>
+            <option value="cortado">Cordato</option>
+          </optgroup>
+          <option value="others">Others</option>
+        </select>
+      </p>
+      <!--displays a text type selection:
+        <p>
+          <label for="coffee">Favorite Coffee:</label>
+          <input type="text" name="coffee" id="coffee-list">
+          <datalist id="coffee-list>
+            <option value""regular coffee">
+            <option value""latte">
+            <option value""espresso">
+            <option value""cortado">
+            <option value""americano">
+            <option value""other">
+            </datalist>
+          </p>      -->
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>What is your favorite food?</legend>
+          <p>
+            <!--<radio> adds a test-like selectable-->
+            <!--if all seletables have the same name="insert_text" than only one can be selected-->
+            <input type="radio" name="food" id="tacos" value="tacos">
+            <label for="tacos">Tacos</label>
+          <p>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label>
+          <p>
+            <input type="radio" name="food" id="other" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+        <fieldset>
+          <legend>Do you have pets?</legend>
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog">
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat">
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="bird" value="bird">
+            <label for="bird">Bird</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+            <label for="otherPet">Other</label>
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Send me a note!</legend>
+          <label for="message">Your message:</label>
+          <br>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+        </fieldset>
+        <br>
+        <!--This button is a git request, sending sensetive information using this method is not advised post request should be used instead-->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <!--formaction"insert_site"sends to information to site-->
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+      </form>
+      </article>
     </main>
-    <hr />
+    <hr>
     <!--Like <header> there can be more than one <footer> in page-->
     <footer>
       <p>
