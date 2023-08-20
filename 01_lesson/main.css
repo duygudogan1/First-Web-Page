@@ -19,7 +19,7 @@ a:visited {
 a:hover, a:active {
   color: #238242;
 }
-
+/*To add a table to the page*/
 table, tr, th, td, caption {
   border: 1px solid #eee;
   font-family: 'Courier New', Courier, monospace;
