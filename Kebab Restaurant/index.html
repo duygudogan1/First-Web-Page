@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Duygu">
+        <meta name="description" content="This page contains information about Hot Love Kebab Restaurant">
+        <title>Hot Love Kebab Restaurant</title>
+        <link rel="icon" href="kebab.png" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        <h1>Welcome to Hot Love Kebab!</h1>
+        <h3>Hot Love Kebab Restaurant, nestled in the city's heart, entices with aromatic flavors and a cozy ambiance. With attentive service, it's a haven for food enthusiasts in search of an unforgettable fusion of tastes and comforting dining.</h3>
+            <nav aria-labelledby="primary-navigation">
+            <h2 id="primary-navigation">Short Links</h2>
+            <ul>
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#order">Order</a>
+                </li>
+                <li>
+                    <a href="hours.html">Hours</a>
+                </li>
+                <li> 
+                    <a href="contacts.html">Contacts and Feedback</a>
+                </li>
+            </ul>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <figure>
+            <img alt="our adana kebab" width="450" height="300"  src="kebab2.webp" loading="lazy">
+            <figcaption>Our beautiful kebabs</figcaption>
+            </figure>
+            
+            <article id="menu">
+                <h2>Our Menu</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kebabs</th>
+                            <th></th>
+                            <th>Soups</th>
+                            <th></th>
+                            <th>Soft Drinks</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Adana Kebab</th>
+                            <th>10$</th>
+                            <th>Lentil Soup</th>
+                            <th>2$</th>
+                            <th>Coke</th>
+                            <th>1$</th>
+                        </tr>
+                        <tr>
+                            <th>Urfa Kebab</th>
+                            <th>10$</th>
+                            <th>Ezogelin Soup</th>
+                            <th>3$</th>
+                            <th>Sprite</th>
+                            <th>1$</th>
+                        </tr>
+                        <tr>
+                            <th>Eggplant Kebab</th>
+                            <th>15$</th>
+                            <th>Yogurt Soup</th>
+                            <th>2$</th>
+                            <th>Ayran</th>
+                            <th>1$</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <!--e-order-->
+            <article id="order">
+                <h2>Order Here!</h2>
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Kebabs</legend>
+                        <p>
+                            <input type="checkbox" name="kebabs" id="adanaKebab" value="adanaKebab">
+                            <label for="adanaKebab">Adana Kebab</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="kebabs" id="urfaKebab" value="urfaKebab">
+                            <label for="urfaKebab">Urfa Kebab</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="kebabs" id="eggplantKebab" value="eggplantKebab">
+                            <label for="eggplantKebab">Eggplant Kebab</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Soups</legend>
+                    <p>
+                        <input type="checkbox" name="soups" id="lentilSoup" value="lentilSoup">
+                        <label for="lentilSoup">Lentil Soup</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="soups" id="ezogelinSoup" value="ezogelinSoup">
+                        <label for="ezogelinSoup">Ezogelin Soup</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="soups" id="yogurtSoup" value="yogurtSoup">
+                        <label for="yogurtSoup">Yogurt Soup</label>
+                    </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Soft Drinks</legend>
+                    <p>
+                        <input type="checkbox" name="drinks" id="coke" value="coke">
+                        <label for="coke">Coke</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="drinks" id="sprite" value="sprite">
+                        <label for="sprite">Sprite</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="drinks" id="Ayran" value="Ayran">
+                        <label for="Ayran">Ayran</label>
+                    </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Your Address</legend>
+                        <label for="address">Write the address you want us to send our kebabs</label>
+                        <br>
+                        <!--text box for address need to be bigger-->
+                        <textarea name="address" id="address" col="30" row="40" placeholder="Gazi Mahallesi Akcay Cad 25, Sokak 58/B 35580 Izmir Karsiyaka"></textarea>
+                    </fieldset>
+                    <br>
+                    <!--order button not working-->
+                    <!-- <button type="post" formaction="https://httpbin.org/post" formmethod="post">Order</button> -->
+                    <button type="submit">Order</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </article>
+        </main>
+        <footer>
+            <p>
+                &lt;&lt;&lt; &copy; Hot Love Kebab &gt;&gt;&gt;
+            </p>
+            <a href="#">Back to the Top</a>
+         </footer>
+    </body>
+
+</html>
